@@ -1,19 +1,24 @@
 {
-  "name": "my-project",
-  "version": "0.1.0",
+  "name": "magicui",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "eslint --fix ."
+    "lint": "next lint"
   },
   "dependencies": {
-    "daisyui": "^5.0.0",
-    "next": "15.2.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cobe": "^0.6.3",
+    "lucide-react": "^0.487.0",
+    "motion": "^12.6.3",
+    "next": "15.2.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.2.0",
+    "tw-animate-css": "^1.2.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -22,7 +27,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.2.1",
+    "eslint-config-next": "15.2.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
