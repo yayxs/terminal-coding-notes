@@ -1,5 +1,35 @@
 ## Claude Code / CC / ClaudeCode
 
+```
+timeline
+    title Claude Code 发展时间线
+
+    section 2025年2月
+        2025-02-24 : 研究预览版首次发布
+                   : 与Claude 3.7 Sonnet同时发布
+                   : 终端代理编程工具
+
+    section 2025年5月
+        2025-05-22 : 正式版(GA)发布
+                   : 从研究预览转为正式可用
+
+    section 2025年6月
+        2025-06-04 : 支持Pro和Max计划
+                   : 扩大用户覆盖范围
+        2025-06-11 : SDK发布
+                   : TypeScript和Python支持
+        2025-06-18 : MCP服务器支持
+                   : SSE和HTTP传输
+                   : OAuth 2.0认证
+        2025-06-30 : Hooks功能
+                   : 社区反馈驱动的功能
+
+    section 当前状态
+        2025年至今 : 版本1.0.44
+                  : 139个版本
+                  : 周下载量268万+
+```
+
 Claude Code 的本质是一个 npm 的包。如果你对趋势感兴趣可以在下述网站查阅安装趋势
 
 - https://npmjs.com/package/@anthropic-ai/claude-code?activeTab=versions
