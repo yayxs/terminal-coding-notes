@@ -1,5 +1,31 @@
 ## Claude Code / CC / ClaudeCode
 
+Claude Code 结合 Kimi K2
+
+使用 Gemini CLI 查找 ~/.claude/settings.json 并且打开
+
+终端编程很多人对前端的知识不懂，后边我写一篇有关运行时相关的博客，请保持关注。
+
+说正题：Claude Code + Kimi 怎么配置？怎么搞？很简单，没心智负担。
+
+[ 1 ] 你已经安装了 Claude Code ，如果你没安装你用个啥。
+
+[ 2 ] 你的Claude Code 没充值，或者到期了，你都买了20美元的Pro，你为啥使用 Kimi K2。
+
+[ 3 ] 你得充值一下 Kimi , 充个50元人民币吧，先用着，慢，没事，先用着。
+
+[ 4 ] 找一下你的key ，这是 env.ANTHROPIC_AUTH_TOKEN 的值
+
+[ 5 ] 找一下 base URL 的值，我去，你在月之暗面的哪个域名下买的，你就用哪个啊base URL 啊。人家两个域名呢：
+https://api.moonshot.ai/anthropic
+https://api.moonshot.cn/anthropic
+这个是 env.ANTHROPIC_BASE_URL 值。
+
+[ 6 ] 找到 CC 的配置文件 ~/.claude/settings.json
+配置进去就行了呀。
+
+![alt text](image.png)
+
 ```
 timeline
     title Claude Code 发展时间线
@@ -23,11 +49,6 @@ timeline
                    : OAuth 2.0认证
         2025-06-30 : Hooks功能
                    : 社区反馈驱动的功能
-
-    section 当前状态
-        2025年至今 : 版本1.0.44
-                  : 139个版本
-                  : 周下载量268万+
 ```
 
 Claude Code 的本质是一个 npm 的包。如果你对趋势感兴趣可以在下述网站查阅安装趋势
