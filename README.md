@@ -1,6 +1,6 @@
-## Claude Code / CC / ClaudeCode
+# Claude Code / CC / ClaudeCode
 
-Claude Code 结合 Kimi K2
+## Claude Code + Kimi K2
 
 使用 Gemini CLI 查找 ~/.claude/settings.json 并且打开
 
@@ -25,6 +25,8 @@ https://api.moonshot.cn/anthropic
 配置进去就行了呀。
 
 ![alt text](image.png)
+
+## CC发展史
 
 ```
 timeline
@@ -51,6 +53,8 @@ timeline
                    : 社区反馈驱动的功能
 ```
 
+## Claude Code 本质
+
 Claude Code 的本质是一个 npm 的包。如果你对趋势感兴趣可以在下述网站查阅安装趋势
 
 - https://npmjs.com/package/@anthropic-ai/claude-code?activeTab=versions
@@ -60,7 +64,15 @@ Claude Code 的本质是一个 npm 的包。如果你对趋势感兴趣可以在
 
 使用代理搜索，无需手动选择上下文即可理解您的整个代码库
 
-## Gemini CLI
+## 常用的 commands
+
+| Command                      | Description        |
+| ---------------------------- | ------------------ |
+| claude "fix the build error" | 执行一次任务       |
+| claude -p "解释一下函数"     | 运行一次查询就退出 |
+| claude -c                    | 继续最近的对话     |
+
+# Gemini CLI
 
 在2025年06月25的时候，谷歌发了 Gemini CLI。虽然谷歌这一路走的很飘逸：在AI编程的这个产品方向上一会又是在浏览器中的，一会又在终端的，一会又是插件呢，一会又扩展。不过作为Claude Code 竞品，不发也不行。
 
@@ -84,9 +96,7 @@ echo 'export GOOGLE_CLOUD_PROJECT="你的ID"' >> ~/.bashrc
 
 主要是执行一些翻译任务。不仅仅是代码。
 
-## Warp
-
-## Amp
+# Amp
 
 Amp 是 Sourcegraph 构建的一个代理式编码工具。an agentic coding tool
 
