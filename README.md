@@ -96,6 +96,17 @@ echo 'export GOOGLE_CLOUD_PROJECT="你的ID"' >> ~/.bashrc
 
 主要是执行一些翻译任务。不仅仅是代码。
 
+# Warp
+
+当然，以下是 Warp 中 terminal、Agent Mode 和 auto detection 的区别说明：
+
+1. Terminal（终端模式）
+   Terminal 是 Warp 的基础模式，和传统终端类似，你可以直接输入和执行 shell 命令。Warp 提供了现代化的终端体验，比如块状输入/输出、自动补全、语法高亮、IDE 式编辑等，但本质上你是在直接和 shell 交互，所有命令都是你手动输入和执行的，没有 AI 介入Terminal: Still a great command-line。
+2. Agent Mode（智能代理模式）
+   Agent Mode 是 Warp 的 AI 模式，允许你用自然语言描述任务（比如“帮我修复端口 3000 被占用”），Warp AI 会理解你的意图，自动生成并建议命令，甚至可以根据你的授权自动执行命令、收集输出、纠正错误，直到任务完成。Agent Mode 支持多步工作流、上下文跟踪、自动修正等高级功能What is Agent Mode? Agent Mode: LLM embedded in the terminal for multi-step workflows。
+3. Auto Detection（自动检测）
+   Auto Detection 是 Warp 的一个本地功能，用于自动判断你在输入的是自然语言还是 shell 命令。如果 Warp 检测到你输入的是自然语言（比如“升级我的 AWS 数据库”），会自动切换到 Agent Mode，准备将你的请求发送给 AI。如果你输入的是标准命令，则保持在 Terminal 模式。这个检测完全在本地完成，只有你按下 ENTER 并确认后，内容才会发送给 AI。你可以在设置中关闭 auto detection，或者为特定命令添加 denylist，避免误判
+
 # Amp
 
 Amp 是 Sourcegraph 构建的一个代理式编码工具。an agentic coding tool
