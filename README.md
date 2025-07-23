@@ -1,8 +1,7 @@
-# Claude Code / CC / ClaudeCode
-
-## 仓库说明
 
 这个仓库是关于终端编程工具的笔记集合，记录了各种AI驱动的终端工具的使用方法、配置说明和最佳实践。内容涵盖了Claude Code、Gemini CLI、Warp终端和Amp等工具，旨在帮助开发者更好地理解和使用这些终端编程工具。
+
+# Claude Code / CC / ClaudeCode
 
 ## Claude Code + Kimi K2
 
@@ -121,7 +120,7 @@ npm install -g @sourcegraph/amp@latest
 
 第一性原理：您并不是在使用 Amp——您是在直接与模型对话
 
-## Qwen Code
+# Qwen Code
 
 系统看过阿里的文档就知道：一直以来都有个代码模型：[通义千问Coder]
 那么这次最新的更新是：稳定版是qwen3-coder-plus，快照版是qwen3-coder-plus-2025-07-22。
@@ -135,4 +134,19 @@ npm install -g @sourcegraph/amp@latest
 国际的是这个：https://dashscope-intl.aliyuncs.com/compatible-mode/v1
 国内的是这个：https://dashscope.aliyuncs.com/compatible-mode/v1 
 
+
+首先你得知道：前端的运行时：感兴趣看这篇 https://github.com/yayxs/JavaScript-Runtime
+
+其次你对终端编程感兴趣：https://github.com/yayxs/terminal-coding-notes
+
 需要注意 Qwen Code 改编自 Gemini CLI ，有一些Gemini的影子，慢慢迭代呗，给点耐心
+
+## 终端设置
+
+将这些环境变量写入您的 .zshrc 文件中，以便它们在每次启动新的终端会话时自动设置
+```
+echo 'export OPENAI_API_KEY="sk-xxxxxxx"' >> ~/.zshrc.   sk-xxxxxxx替换你自己的KEY
+echo 'export OPENAI_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"' >> ~/.zshrc
+echo 'export OPENAI_MODEL="qwen3-coder-plus"' >> ~/.zshrc
+```
+将这些环境变量写入了您的 ~/.zshrc 文件中，这样它们会在每次启动新的 zsh 会话时自动加载。
