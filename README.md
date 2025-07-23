@@ -1,5 +1,9 @@
 # Claude Code / CC / ClaudeCode
 
+## 仓库说明
+
+这个仓库是关于终端编程工具的笔记集合，记录了各种AI驱动的终端工具的使用方法、配置说明和最佳实践。内容涵盖了Claude Code、Gemini CLI、Warp终端和Amp等工具，旨在帮助开发者更好地理解和使用这些终端编程工具。
+
 ## Claude Code + Kimi K2
 
 使用 Gemini CLI 查找 ~/.claude/settings.json 并且打开
