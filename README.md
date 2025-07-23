@@ -116,3 +116,19 @@ npm install -g @sourcegraph/amp@latest
 ```
 
 第一性原理：您并不是在使用 Amp——您是在直接与模型对话
+
+## Qwen Code
+
+系统看过阿里的文档就知道：一直以来都有个代码模型：[通义千问Coder]
+那么这次最新的更新是：稳定版是qwen3-coder-plus，快照版是qwen3-coder-plus-2025-07-22。
+
+[ 1 ] 原则：哪家的工具使用哪家的模型：使用的是最新的代码模型是通义千问Coder。稳定版是qwen3-coder-plus，快照版是qwen3-coder-plus-2025-07-22。（现在：qwen3-coder-plus-2025-07-22能力相同）
+
+[ 2 ] 找key : 阿里云百炼上找API Key。百炼：是一站式的大模型开发及应用构建平台。阿里云的大模型服务平台是：百炼
+
+[ 3 ] 找Base URL：
+
+国际的是这个：https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+国内的是这个：https://dashscope.aliyuncs.com/compatible-mode/v1 
+
+需要注意 Qwen Code 改编自 Gemini CLI ，有一些Gemini的影子，慢慢迭代呗，给点耐心
