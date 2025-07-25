@@ -13,6 +13,8 @@
 
 # Claude Code / CC / ClaudeCode
 
+有一个专门的仓库，用于收集 **X** 上有关 **Claude Code** 的精品推文 [ Awesome X Claude Code ] https://github.com/yayxs/awesome-x-claude-code
+
 ## 来自官方的
 
 - [Anthropic 新闻： Anthropic 团队如何使用 Claude Code] https://www.anthropic.com/news/how-anthropic-teams-use-claude-code
