@@ -1,7 +1,17 @@
+这个仓库是关于终端编程工具的笔记集合，记录了各种AI驱动的终端工具的使用方法、配置说明和最佳实践。旨在帮助开发者更好地理解和使用这些终端编程工具。这是一种由 `编辑器` 到 `终端`开发方式的转变。
+内容涵盖了：
 
-这个仓库是关于终端编程工具的笔记集合，记录了各种AI驱动的终端工具的使用方法、配置说明和最佳实践。内容涵盖了Claude Code、Gemini CLI、Warp终端和Amp等工具，旨在帮助开发者更好地理解和使用这些终端编程工具。
+[ 美国 ] 千亿估值大语言模型厂商 Anthropic 的 Claude Code
+[ 美国 ] 2万多亿上市公司谷歌的 Gemini CLI
+[ 中国 ] 阿里巴巴阿里云团队的 Qwen Code
+[ -- ] Warp终端
+[ -- ] Ampcode
 
 # Claude Code / CC / ClaudeCode
+
+## 来自官方的
+
+- [Anthropic 新闻： Anthropic 团队如何使用 Claude Code] https://www.anthropic.com/news/how-anthropic-teams-use-claude-code
 
 ## Claude Code + Kimi K2
 
@@ -132,8 +142,7 @@ npm install -g @sourcegraph/amp@latest
 [ 3 ] 找Base URL：
 
 国际的是这个：https://dashscope-intl.aliyuncs.com/compatible-mode/v1
-国内的是这个：https://dashscope.aliyuncs.com/compatible-mode/v1 
-
+国内的是这个：https://dashscope.aliyuncs.com/compatible-mode/v1
 
 首先你得知道：前端的运行时：感兴趣看这篇 https://github.com/yayxs/JavaScript-Runtime
 
@@ -144,9 +153,11 @@ npm install -g @sourcegraph/amp@latest
 ## 终端设置
 
 将这些环境变量写入您的 .zshrc 文件中，以便它们在每次启动新的终端会话时自动设置
+
 ```
 echo 'export OPENAI_API_KEY="sk-xxxxxxx"' >> ~/.zshrc.   sk-xxxxxxx替换你自己的KEY
 echo 'export OPENAI_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"' >> ~/.zshrc
 echo 'export OPENAI_MODEL="qwen3-coder-plus"' >> ~/.zshrc
 ```
+
 将这些环境变量写入了您的 ~/.zshrc 文件中，这样它们会在每次启动新的 zsh 会话时自动加载。
