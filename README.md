@@ -15,6 +15,71 @@
 
 有一个专门的仓库，用于收集 **X** 上有关 **Claude Code** 的精品推文 [ Awesome X Claude Code ] https://github.com/yayxs/awesome-x-claude-code
 
+Anthropic 团队使用 Claude Code 的核心策略：
+
+```mermaid
+flowchart TD
+    A[开始新任务] --> B{任务复杂度评估}
+
+    B -->|简单/外围功能| C[异步模式]
+    B -->|核心/关键功能| D[同步模式]
+
+    C --> C1[启用自动接受模式]
+    C1 --> C2[让Claude自主工作]
+    C2 --> C3[定期检查点提交]
+    C3 --> C4{结果满意?}
+    C4 -->|是| E[接受并继续]
+    C4 -->|否| F[回滚重试]
+
+    D --> D1[实时监督]
+    D1 --> D2[详细提示指导]
+    D2 --> D3[逐步验证输出]
+    D3 --> D4[质量检查]
+    D4 --> E
+
+    F --> G[老虎机策略]
+    G --> G1[保存当前状态]
+    G1 --> G2[让Claude工作30分钟]
+    G2 --> G3{结果可用?}
+    G3 -->|是| E
+    G3 -->|否| H[完全重新开始]
+
+    E --> I{需要文档?}
+    I -->|是| J[让Claude总结并改进文档]
+    I -->|否| K[任务完成]
+
+    J --> K
+    H --> C2
+
+    subgraph "准备阶段"
+        P1[在Claude.ai中规划] --> P2[编写详细Claude.md]
+        P2 --> P3[设置自定义斜杠命令]
+        P3 --> P4[准备截图和视觉材料]
+    end
+
+    subgraph "团队协作"
+        T1[分享使用会话] --> T2[传播最佳实践]
+        T2 --> T3[跨团队学习]
+    end
+
+    subgraph "质量保证"
+        Q1[自我验证循环] --> Q2[自动运行测试]
+        Q2 --> Q3[生成综合测试]
+        Q3 --> Q4[代码审查]
+    end
+
+    A -.-> P1
+    E -.-> T1
+    D3 -.-> Q1
+
+    style C fill:#e1f5fe
+    style D fill:#fff3e0
+    style G fill:#f3e5f5
+    style P1 fill:#e8f5e8
+    style T1 fill:#fff8e1
+    style Q1 fill:#fce4ec
+```
+
 ## 来自官方的
 
 - [Anthropic 新闻： Anthropic 团队如何使用 Claude Code] https://www.anthropic.com/news/how-anthropic-teams-use-claude-code
