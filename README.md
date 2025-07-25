@@ -15,6 +15,10 @@
 
 有一个专门的仓库，用于收集 **X** 上有关 **Claude Code** 的精品推文 [ Awesome X Claude Code ] https://github.com/yayxs/awesome-x-claude-code
 
+## 来自官方的
+
+- [Anthropic 新闻： Anthropic 团队如何使用 Claude Code] https://www.anthropic.com/news/how-anthropic-teams-use-claude-code
+  
 Anthropic 团队使用 Claude Code 的核心策略：
 
 ```mermaid
@@ -80,9 +84,7 @@ flowchart TD
     style Q1 fill:#fce4ec
 ```
 
-## 来自官方的
-
-- [Anthropic 新闻： Anthropic 团队如何使用 Claude Code] https://www.anthropic.com/news/how-anthropic-teams-use-claude-code
+[ Engineering at Anthropic  Claude Code：智能体编码最佳实践]  https://www.anthropic.com/engineering/claude-code-best-practices
 
 ## Claude Code + Kimi K2
 
