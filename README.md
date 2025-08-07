@@ -24,9 +24,7 @@
 
 - [Anthropic 新闻： Anthropic 团队如何使用 Claude Code] https://www.anthropic.com/news/how-anthropic-teams-use-claude-code
 
-Anthropic 团队使用 Claude Code 的核心策略：
-
-[ Engineering at Anthropic Claude Code：智能体编码最佳实践] https://www.anthropic.com/engineering/claude-code-best-practices
+- [ Engineering at Anthropic Claude Code：智能体编码最佳实践] https://www.anthropic.com/engineering/claude-code-best-practices
 
 ## Claude Code + Kimi K2
 
