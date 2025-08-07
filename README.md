@@ -1,90 +1,32 @@
+# 终端编程手册
+
 这个仓库是关于终端编程工具的笔记集合，记录了各种AI驱动的终端工具的使用方法、配置说明和最佳实践。旨在帮助开发者更好地理解和使用这些终端编程工具。这是一种由 `编辑器` 到 `终端`开发方式的转变。
+
 内容涵盖了：
 
-[ 美国 ] 千亿估值大语言模型厂商 Anthropic 的 Claude Code
+[ 美国 ] Anthropic 的 Claude Code （估值已经千亿美元）
 
-[ 美国 ] 2万多亿上市公司谷歌的 Gemini CLI
+[ 美国 ] 谷歌的 Gemini CLI （市值几万亿）
 
-[ 中国 ] 阿里巴巴阿里云团队的 Qwen Code
+[ 中国 ] 阿里巴巴-阿里云团队的 Qwen Code （基于 Gemini CLI）
 
 [ -- ] Warp终端
 
 [ -- ] Ampcode
 
+[ -- ] Opencode（开源）
+
 # Claude Code / CC / ClaudeCode
 
 有一个专门的仓库，用于收集 **X** 上有关 **Claude Code** 的精品推文 [ Awesome X Claude Code ] https://github.com/yayxs/awesome-x-claude-code
 
-## 来自官方的
+## 官方 & Claude Code
 
 - [Anthropic 新闻： Anthropic 团队如何使用 Claude Code] https://www.anthropic.com/news/how-anthropic-teams-use-claude-code
-  
+
 Anthropic 团队使用 Claude Code 的核心策略：
 
-```mermaid
-flowchart TD
-    A[开始新任务] --> B{任务复杂度评估}
-
-    B -->|简单/外围功能| C[异步模式]
-    B -->|核心/关键功能| D[同步模式]
-
-    C --> C1[启用自动接受模式]
-    C1 --> C2[让Claude自主工作]
-    C2 --> C3[定期检查点提交]
-    C3 --> C4{结果满意?}
-    C4 -->|是| E[接受并继续]
-    C4 -->|否| F[回滚重试]
-
-    D --> D1[实时监督]
-    D1 --> D2[详细提示指导]
-    D2 --> D3[逐步验证输出]
-    D3 --> D4[质量检查]
-    D4 --> E
-
-    F --> G[老虎机策略]
-    G --> G1[保存当前状态]
-    G1 --> G2[让Claude工作30分钟]
-    G2 --> G3{结果可用?}
-    G3 -->|是| E
-    G3 -->|否| H[完全重新开始]
-
-    E --> I{需要文档?}
-    I -->|是| J[让Claude总结并改进文档]
-    I -->|否| K[任务完成]
-
-    J --> K
-    H --> C2
-
-    subgraph "准备阶段"
-        P1[在Claude.ai中规划] --> P2[编写详细Claude.md]
-        P2 --> P3[设置自定义斜杠命令]
-        P3 --> P4[准备截图和视觉材料]
-    end
-
-    subgraph "团队协作"
-        T1[分享使用会话] --> T2[传播最佳实践]
-        T2 --> T3[跨团队学习]
-    end
-
-    subgraph "质量保证"
-        Q1[自我验证循环] --> Q2[自动运行测试]
-        Q2 --> Q3[生成综合测试]
-        Q3 --> Q4[代码审查]
-    end
-
-    A -.-> P1
-    E -.-> T1
-    D3 -.-> Q1
-
-    style C fill:#e1f5fe
-    style D fill:#fff3e0
-    style G fill:#f3e5f5
-    style P1 fill:#e8f5e8
-    style T1 fill:#fff8e1
-    style Q1 fill:#fce4ec
-```
-
-[ Engineering at Anthropic  Claude Code：智能体编码最佳实践]  https://www.anthropic.com/engineering/claude-code-best-practices
+[ Engineering at Anthropic Claude Code：智能体编码最佳实践] https://www.anthropic.com/engineering/claude-code-best-practices
 
 ## Claude Code + Kimi K2
 
@@ -112,32 +54,6 @@ https://api.moonshot.cn/anthropic
 
 ![alt text](image.png)
 
-## CC发展史
-
-```
-timeline
-    title Claude Code 发展时间线
-
-    section 2025年2月
-        2025-02-24 : 研究预览版首次发布
-                   : 与Claude 3.7 Sonnet同时发布
-                   : 终端代理编程工具
-
-    section 2025年5月
-        2025-05-22 : 正式版(GA)发布
-                   : 从研究预览转为正式可用
-
-    section 2025年6月
-        2025-06-04 : 支持Pro和Max计划
-                   : 扩大用户覆盖范围
-        2025-06-11 : SDK发布
-                   : TypeScript和Python支持
-        2025-06-18 : MCP服务器支持
-                   : SSE和HTTP传输
-                   : OAuth 2.0认证
-        2025-06-30 : Hooks功能
-                   : 社区反馈驱动的功能
-```
 
 ## Claude Code 本质
 
@@ -184,14 +100,13 @@ echo 'export GOOGLE_CLOUD_PROJECT="你的ID"' >> ~/.bashrc
 
 # Warp
 
-当然，以下是 Warp 中 terminal、Agent Mode 和 auto detection 的区别说明：
+可以直接访问 https://docs.warp.dev/ 然后右下角 `Ask Kapa AI` 输入 “terminal 与 agent 与 anto detection  什么区别”
 
-1. Terminal（终端模式）
-   Terminal 是 Warp 的基础模式，和传统终端类似，你可以直接输入和执行 shell 命令。Warp 提供了现代化的终端体验，比如块状输入/输出、自动补全、语法高亮、IDE 式编辑等，但本质上你是在直接和 shell 交互，所有命令都是你手动输入和执行的，没有 AI 介入Terminal: Still a great command-line。
-2. Agent Mode（智能代理模式）
-   Agent Mode 是 Warp 的 AI 模式，允许你用自然语言描述任务（比如“帮我修复端口 3000 被占用”），Warp AI 会理解你的意图，自动生成并建议命令，甚至可以根据你的授权自动执行命令、收集输出、纠正错误，直到任务完成。Agent Mode 支持多步工作流、上下文跟踪、自动修正等高级功能What is Agent Mode? Agent Mode: LLM embedded in the terminal for multi-step workflows。
-3. Auto Detection（自动检测）
-   Auto Detection 是 Warp 的一个本地功能，用于自动判断你在输入的是自然语言还是 shell 命令。如果 Warp 检测到你输入的是自然语言（比如“升级我的 AWS 数据库”），会自动切换到 Agent Mode，准备将你的请求发送给 AI。如果你输入的是标准命令，则保持在 Terminal 模式。这个检测完全在本地完成，只有你按下 ENTER 并确认后，内容才会发送给 AI。你可以在设置中关闭 auto detection，或者为特定命令添加 denylist，避免误判
+Terminal：传统命令行界面，执行 shell 命令。
+
+Agent：AI 协作者，理解自然语言，自动执行和修正多步任务。
+
+Auto-detection：本地检测输入内容，自动在 terminal 和 agent 模式间切换。
 
 # Amp
 
@@ -234,3 +149,30 @@ echo 'export OPENAI_MODEL="qwen3-coder-plus"' >> ~/.zshrc
 ```
 
 将这些环境变量写入了您的 ~/.zshrc 文件中，这样它们会在每次启动新的 zsh 会话时自动加载。
+
+
+# Opencode
+
+## Opencode + Kimi
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "moonshot": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Moonshot AI",
+      "options": {
+        "baseURL": "https://api.moonshot.cn/v1",
+        "apiKey":"sk-xxxxx"
+
+      },
+      "models": {
+        "kimi-k2-turbo-preview": {
+          "name": "Kimi K2 Turbo"
+        }
+      }
+    }
+  }
+}
+```
