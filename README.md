@@ -1,14 +1,16 @@
 # 终端编程手册
 
-这个仓库是关于终端编程工具的笔记集合，记录了各种AI驱动的终端工具的使用方法、配置说明和最佳实践。旨在帮助开发者更好地理解和使用这些终端编程工具。这是一种由 `编辑器` 到 `终端`开发方式的转变。
+## 项目说明
+
+这个仓库是关于**终端编程**工具的笔记集合，记录了各种AI驱动的终端工具的使用方法、配置说明和最佳实践。旨在帮助开发者更好地理解和使用这些终端编程工具。这是一种由 `编辑器` 到 `终端`开发方式的转变。
 
 内容涵盖了：
 
-[ 美国 ] Anthropic 的 Claude Code （估值已经千亿美元）
+[ 大语言模型厂商 ] Anthropic 的 Claude Code （Anthropic 估值已达到千亿美元）
 
-[ 美国 ] 谷歌的 Gemini CLI （市值几万亿）
+[ 大语言模型厂商 ] 谷歌的 Gemini CLI （谷歌上市公司：市值几万亿）
 
-[ 中国 ] 阿里巴巴-阿里云团队的 Qwen Code （基于 Gemini CLI）
+[ 大语言模型厂商 ] 阿里巴巴-阿里云团队的 Qwen Code （基于 Gemini CLI）
 
 [ -- ] Warp终端
 
@@ -16,21 +18,47 @@
 
 [ -- ] Opencode（开源）
 
+## 主观偏见
+
+个人觉得 Claude Code 目前是最好的终端编程的方案。推荐使用 2 个终端来执行命令
+
+1、Warp
+
+2、iTerm2
+
 # Claude Code / CC / ClaudeCode
 
-有一个专门的仓库，用于收集 **X** 上有关 **Claude Code** 的精品推文 [ Awesome X Claude Code ] https://github.com/yayxs/awesome-x-claude-code
+Tips：有一个专门的仓库，用于收集 **X** 上有关 **Claude Code** 的精品推文 [ Awesome X Claude Code ] https://github.com/yayxs/awesome-x-claude-code
 
-## 官方 & Claude Code
+1、 切换模型的方式： /model 、--model 或者在环境变量中
 
-- [Anthropic 新闻： Anthropic 团队如何使用 Claude Code] https://www.anthropic.com/news/how-anthropic-teams-use-claude-code
+2、/status 查看当前的模型
 
-- [ Engineering at Anthropic Claude Code：智能体编码最佳实践] https://www.anthropic.com/engineering/claude-code-best-practices
+3、能力由强到弱：claude-opus-4-1-20250805、claude-opus-4-20250514、claude-sonnet-4-20250514、claude-3-7-sonnet-20250219、claude-3-5-haiku-20241022
+
+- Opus (杰作/巨著)  在拉丁语中，“Opus” 意为“作品”，尤指重要的、大规模的艺术或音乐创作，常用来指代大师的“杰作”或“巨著”。
+
+- Sonnet (十四行诗) Sonnet” 是一种结构严谨的抒情诗体，通常有14行 常用于表达爱情、美感或哲理。
+
+- Haiku (俳句) “Haiku” 是一种日本古典短诗，通常由三句十七音组成（按5-7-5的音节排列）。
+
+4、20美元的是不能使用 opus 的
+
+5、切换模型：
+
+claude --model claude-opus-4-1-20250805
+
+claude --model claude-opus-4-20250514
+
+claude --model claude-sonnet-4-20250514
+
+claude --model claude-3-7-sonnet-20250219
+
+claude --model claude-3-5-haiku-20241022
 
 ## Claude Code + Kimi K2
 
-使用 Gemini CLI 查找 ~/.claude/settings.json 并且打开
-
-终端编程很多人对前端的知识不懂，后边我写一篇有关运行时相关的博客，请保持关注。
+找到 ~/.claude/settings.json 并且打开
 
 说正题：Claude Code + Kimi 怎么配置？怎么搞？很简单，没心智负担。
 
@@ -52,7 +80,6 @@ https://api.moonshot.cn/anthropic
 
 ![alt text](image.png)
 
-
 ## Claude Code 本质
 
 Claude Code 的本质是一个 npm 的包。如果你对趋势感兴趣可以在下述网站查阅安装趋势
@@ -61,16 +88,6 @@ Claude Code 的本质是一个 npm 的包。如果你对趋势感兴趣可以在
 - https://npmtrends.com/@anthropic-ai/claude-code
 - https://npm-stat.com/charts.html?package=%40anthropic-ai%2Fclaude-code&from=2025-02-23&to=2025-07-05
 - https://npmcharts.com/compare/@anthropic-ai/claude-code?interval=1&log=false
-
-使用代理搜索，无需手动选择上下文即可理解您的整个代码库
-
-## 常用的 commands
-
-| Command                      | Description        |
-| ---------------------------- | ------------------ |
-| claude "fix the build error" | 执行一次任务       |
-| claude -p "解释一下函数"     | 运行一次查询就退出 |
-| claude -c                    | 继续最近的对话     |
 
 # Gemini CLI
 
