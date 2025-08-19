@@ -10,7 +10,7 @@
 
 [ 大语言模型厂商 ] 谷歌的 Gemini CLI （谷歌上市公司：市值几万亿）
 
-[ 大语言模型厂商 ] 阿里巴巴-阿里云团队的 Qwen Code （基于 Gemini CLI）
+[ 大语言模型厂商 ] 阿里巴巴 阿里云团队的 Qwen Code （源自 Gemini CLI）
 
 [ -- ] Warp终端
 
@@ -55,6 +55,14 @@ claude --model claude-sonnet-4-20250514
 claude --model claude-3-7-sonnet-20250219
 
 claude --model claude-3-5-haiku-20241022
+
+6、价格的选择
+
+- pro 20美元 一个月 用不了最强的 opus
+
+- max 100 美元 5倍 的 pro
+
+- max 200 美元 20倍 的 pro
 
 ## Claude Code + Kimi K2
 
@@ -113,23 +121,6 @@ echo 'export GOOGLE_CLOUD_PROJECT="你的ID"' >> ~/.bashrc
 
 主要是执行一些翻译任务。不仅仅是代码。
 
-# Warp
-
-可以直接访问 https://docs.warp.dev/ 然后右下角 `Ask Kapa AI` 输入 “terminal 与 agent 与 anto detection  什么区别”
-
-Terminal：传统命令行界面，执行 shell 命令。
-
-Agent：AI 协作者，理解自然语言，自动执行和修正多步任务。
-
-Auto-detection：本地检测输入内容，自动在 terminal 和 agent 模式间切换。
-
-# Amp
-
-Amp 是 Sourcegraph 构建的一个代理式编码工具。an agentic coding tool
-
-```sh
-npm install -g @sourcegraph/amp@latest
-```
 
 第一性原理：您并不是在使用 Amp——您是在直接与模型对话
 
@@ -138,33 +129,12 @@ npm install -g @sourcegraph/amp@latest
 系统看过阿里的文档就知道：一直以来都有个代码模型：[通义千问Coder]
 那么这次最新的更新是：稳定版是qwen3-coder-plus，快照版是qwen3-coder-plus-2025-07-22。
 
-[ 1 ] 原则：哪家的工具使用哪家的模型：使用的是最新的代码模型是通义千问Coder。稳定版是qwen3-coder-plus，快照版是qwen3-coder-plus-2025-07-22。（现在：qwen3-coder-plus-2025-07-22能力相同）
+- qwen3-coder-plus 的能力 等于 qwen3-coder-plus-2025-07-22
+- 每日 2,000 次请求
+- 每分钟 60 次请求的速率限制
+- 在解析器级别进行适配，以更好地支持 Qwen-Coder 模型
 
-[ 2 ] 找key : 阿里云百炼上找API Key。百炼：是一站式的大模型开发及应用构建平台。阿里云的大模型服务平台是：百炼
-
-[ 3 ] 找Base URL：
-
-国际的是这个：https://dashscope-intl.aliyuncs.com/compatible-mode/v1
-国内的是这个：https://dashscope.aliyuncs.com/compatible-mode/v1
-
-首先你得知道：前端的运行时：感兴趣看这篇 https://github.com/yayxs/JavaScript-Runtime
-
-其次你对终端编程感兴趣：https://github.com/yayxs/terminal-coding-notes
-
-需要注意 Qwen Code 改编自 Gemini CLI ，有一些Gemini的影子，慢慢迭代呗，给点耐心
-
-## 终端设置
-
-将这些环境变量写入您的 .zshrc 文件中，以便它们在每次启动新的终端会话时自动设置
-
-```
-echo 'export OPENAI_API_KEY="sk-xxxxxxx"' >> ~/.zshrc.   sk-xxxxxxx替换你自己的KEY
-echo 'export OPENAI_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"' >> ~/.zshrc
-echo 'export OPENAI_MODEL="qwen3-coder-plus"' >> ~/.zshrc
-```
-
-将这些环境变量写入了您的 ~/.zshrc 文件中，这样它们会在每次启动新的 zsh 会话时自动加载。
-
+备注：早期的配置还是有点麻烦的，现在官方直接提供了 OAuth 认证。
 
 # Opencode
 
@@ -190,4 +160,22 @@ echo 'export OPENAI_MODEL="qwen3-coder-plus"' >> ~/.zshrc
     }
   }
 }
+```
+
+# Warp
+
+可以直接访问 https://docs.warp.dev/ 然后右下角 `Ask Kapa AI` 输入 “terminal 与 agent 与 anto detection  什么区别”
+
+Terminal：传统命令行界面，执行 shell 命令。
+
+Agent：AI 协作者，理解自然语言，自动执行和修正多步任务。
+
+Auto-detection：本地检测输入内容，自动在 terminal 和 agent 模式间切换。
+
+# Amp
+
+Amp 是 Sourcegraph 构建的一个代理式编码工具。an agentic coding tool
+
+```sh
+npm install -g @sourcegraph/amp@latest
 ```
