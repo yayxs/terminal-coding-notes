@@ -18,6 +18,18 @@
 
 [ -- ] Opencode（开源）
 
+[ -- ] Crush
+
+## Package Versions
+
+1、@anthropic-ai/claude-code https://www.npmjs.com/package/@anthropic-ai/claude-code?activeTab=versions
+
+2、@google/gemini-cli https://www.npmjs.com/package/@google/gemini-cli?activeTab=versions
+
+3、@qwen-code/qwen-code https://www.npmjs.com/package/@qwen-code/qwen-code?activeTab=versions
+
+4、@charmland/crush https://www.npmjs.com/package/@charmland/crush?activeTab=versions
+
 ## 主观偏见
 
 个人觉得 Claude Code 目前是最好的终端编程的方案。推荐使用 2 个终端来执行命令
@@ -178,4 +190,48 @@ Amp 是 Sourcegraph 构建的一个代理式编码工具。an agentic coding too
 
 ```sh
 npm install -g @sourcegraph/amp@latest
+```
+
+
+# Crush
+
+Crush 的默认模型列表由 Catwalk 管理。如果是 Crush + GLM 的配置如下：
+
+```json
+{
+  "name": "Z.AI",
+  "id": "zai",
+  "api_key": "$ZAI_API_KEY",
+  "api_endpoint": "https://api.z.ai/api/paas/v4",
+  "type": "openai",
+  "default_large_model_id": "glm-4.5",
+  "default_small_model_id": "glm-4.5-air",
+  "models": [
+    {
+      "id": "glm-4.5",
+      "name": "GLM-4.5",
+      "cost_per_1m_in": 0.6,
+      "cost_per_1m_out": 2.2,
+      "cost_per_1m_in_cached": 0.11,
+      "cost_per_1m_out_cached": 0,
+      "context_window": 131072,
+      "default_max_tokens": 98304,
+      "can_reason": true,
+      "has_reasoning_efforts": false,
+      "supports_attachments": false
+    },
+    {
+      "id": "glm-4.5-air",
+      "name": "GLM-4.5-Air",
+      "cost_per_1m_in": 0.2,
+      "cost_per_1m_out": 1.1,
+      "cost_per_1m_in_cached": 0.03,
+      "context_window": 131072,
+      "default_max_tokens": 98304,
+      "can_reason": true,
+      "has_reasoning_efforts": false,
+      "supports_attachments": false
+    }
+  ]
+}
 ```
